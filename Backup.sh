@@ -3,7 +3,7 @@ echo "Hi"
 echo "If you have a good idea to improve this program" 
 echo "or if you want to tell me that you don't like my script "
 echo "you can send an email to me. Maybe I even will answer." 
-echo "My e-mail Adress : nenpo@hotmail.com"
+echo "My e-mail Adress : lefterisandrianakis@gmail.com"
 echo "I am thankful for every Feedback."
 echo ""
 echo "Do you want to copy files in Backup folder into the current folder."
@@ -26,11 +26,11 @@ if [ $answer = y ]; then
   cp -Rv /etc/samba .
   cp -Rv /etc/conf.d .
   cp -Rv /etc/X11 .
-  cp -Rv /boot ./boot
+  cp -Rv /boot ./boot ##This is just for having a backup of the file only and it's not linked back.
   mkdir ./conky
   cp -Rv /home/$USER/.conky/* ./conky
   cp -v /etc/sddm.conf .
-  cp -v /etc/fstab .
+  cp -v /etc/fstab . ##This is just for having a backup of the file only and it's not linked back.
   cp -v /etc/mkinitcpio.conf .
   cp -v /etc/pacman.conf .
   cp -v /etc/bash.bashrc .

@@ -3,7 +3,7 @@ echo "Hi"
 echo "If you have a good idea to improve this program" 
 echo "or if you want to tell me that you don't like my script "
 echo "you can send an email to me. Maybe I even will answer." 
-echo "My e-mail Adress : nenpo@hotmail.com"
+echo "My e-mail Adress : lefterisandrianakis@gmail.com"
 echo "I am thankful for every Feedback."
 echo ""
 echo "Do you want to delete the BackedUp system files?"
@@ -26,7 +26,7 @@ if [ $answer = y ]; then
   sudo rm -R /etc/X11
   sudo rm -R /home/$USER/.conky
   sudo rm /etc/sddm.conf 
-  sudo rm /etc/fstab 
+#  sudo rm /etc/fstab ##It's not working for me because i have the backup folder on another hdd.
   sudo rm /etc/mkinitcpio.conf 
   sudo rm /etc/pacman.conf 
   sudo rm /etc/bash.bashrc 
@@ -54,7 +54,7 @@ if [ $answer = y ] then;
   sudo ln $PWD/X11 /etc/X11
   sudo ln -s $PWD/conky /home/nenpo/.conky
   sudo ln -s $PWD/sddm.conf /etc/sddm.conf 
-  sudo ln $PWD/fstab /etc/fstab 
+#  sudo ln $PWD/fstab /etc/fstab ##It's not working for me because i have the backup folder on another hdd.
   sudo ln -s $PWD/mkinitcpio.conf /etc/mkinitcpio.conf 
   sudo ln -s $PWD/pacman.conf /etc/pacman.conf 
   sudo ln -s $PWD/bash.bashrc /etc/bash.bashrc 
