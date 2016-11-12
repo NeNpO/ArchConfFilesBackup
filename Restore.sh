@@ -6,6 +6,8 @@ echo "you can send an email to me. Maybe I even will answer."
 echo "My e-mail Adress : lefterisandrianakis@gmail.com"
 echo "I am thankful for every Feedback."
 echo ""
+echo "This is going to delete the original files and then restore the backedup files as links to the original location."
+echo ""
 echo "Do you want to delete the BackedUp system files?"
 echo "Your answer y / n :"
 read answer
