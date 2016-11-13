@@ -8,17 +8,42 @@ echo "I am thankful for every Feedback."
 echo ""
 echo "This script is going to delete the original files and then restore the backedup files as links to the original location."
 echo ""
+echo "Do you want a list of the files that will be deleted? (y/n):"; read answer
+if [ $answer = n ]; then
+  echo ""
+  echo "Ok, lets go on!"
+fi
+if [ $answer = y ]; then
+  echo ""
+  echo "The following packages will be deleted:"
+  echo "  /etc/modules-load.d
+  /etc/modprobe.d
+  /etc/cron.*
+  /etc/samba/
+  /etc/conf.d/
+  /etc/X11/
+  /home/$USER/.conky/*
+  /etc/sddm.conf
+  /etc/mkinitcpio.conf
+  /etc/pacman.conf
+  /etc/bash.bashrc
+  /etc/motd"
+fi
+echo ""
 echo "Do you want to delete the BackedUp system files?"
 echo "Your answer y / n :"
 read answer
 
 if [ $answer = n ]; then
+  echo ""
 	echo "Thank you. Bye!"
 	exit
 fi
 
 if [ $answer = y ]; then 
+  echo ""
   echo "Okay lets start!"
+  echo ""
   echo "Removing system files."
   sudo rm -R /etc/modules-load.d
   sudo rm -R /etc/modprobe.d
@@ -34,7 +59,30 @@ if [ $answer = y ]; then
   sudo rm /etc/bash.bashrc 
   sudo rm /home/$USER/.bashrc
   sudo rm /etc/motd 
+  echo ""
   echo "Done! All Files have been removed."
+fi
+echo ""
+echo "Do you want a list of the files that will be linked? (y/n):"; read answer
+if [ $answer = n ]; then
+  echo ""
+  echo "Ok, lets go on!"
+fi
+if [ $answer = y ]; then
+  echo ""
+  echo "The following packages will be linked:"
+  echo "  /etc/modules-load.d
+  /etc/modprobe.d
+  /etc/cron.*
+  /etc/samba/
+  /etc/conf.d/
+  /etc/X11/
+  /home/$USER/.conky/*
+  /etc/sddm.conf
+  /etc/mkinitcpio.conf
+  /etc/pacman.conf
+  /etc/bash.bashrc
+  /etc/motd"
 fi
 echo ""
 echo "Do you want to create symbolic links to the original location?"
@@ -42,11 +90,13 @@ echo "Your answer y / n :"
 read answer
 
 if [ $answer = n ]; then
+  echo ""
 	echo "Thank you. Bye!"
 	exit
 fi
 
 if [ $answer = y ] then;
+  echo ""
   echo "Okay lets start!"
   sudo ln -s $PWD/modules-load.d /etc/modules-load.d 
   sudo ln -s $PWD/modprobe.d /etc/modprobe.d
@@ -62,4 +112,6 @@ if [ $answer = y ] then;
   sudo ln -s $PWD/bash.bashrc /etc/bash.bashrc 
   sudo ln -s $PWD/bash.bashrc /home/nenpo/.bashrc
   sudo ln -s $PWD/motd /etc/motd
+  echo ""
+  echo "Done! Everyhing is linked back. Bye!"
 fi

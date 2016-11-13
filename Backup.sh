@@ -10,10 +10,12 @@ echo "This script is going to backup the original files to your current location
 echo ""
 echo "Do you want a list of the files that will be backed up? (y/n):"; read answer
 if [ $answer = n ]; then
+  echo ""
   echo "Ok, lets go on!"
 fi
 if [ $answer = y ]; then
-  echo "The following packages will backed up:"
+  echo ""
+  echo "The following packages will be backed up:"
   echo "  /etc/modules-load.d
   /etc/modprobe.d
   /etc/cron.*
@@ -29,9 +31,11 @@ if [ $answer = y ]; then
   /etc/bash.bashrc
   /etc/motd"
 fi
+echo ""
 echo "Do you want to copy files in Backup folder into the current folder. (y/n):"; read answer
 
 if [ $answer = n ]; then
+  echo ""
 	echo "Thank you. Bye!"
 	exit
 fi
@@ -56,5 +60,6 @@ if [ $answer = y ]; then
   cp -v /etc/pacman.conf .
   cp -v /etc/bash.bashrc .
   cp -v /etc/motd .
+  echo ""
   echo "Everything is Done!"
 fi
