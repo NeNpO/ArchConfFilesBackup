@@ -1,4 +1,5 @@
-#Sh Script for taking backup of Arch Linux conf files to the current folder
+#!/bin/sh
+#Bash Script for taking backup of Arch Linux conf files to the current folder
 echo "Hi"
 echo "If you have a good idea to improve this program"
 echo "or if you want to tell me that you don't like my script "
@@ -8,12 +9,12 @@ echo "I am thankful for every Feedback."
 echo ""
 echo "This script is going to backup the original files to your current location."
 echo ""
-echo "Do you want a list of the files that will be backed up? (y/n):"; read answer
-if [ $answer = n ]; then
+echo "Do you want a list of the files that will be backed up? (y/n):"; read -r answer
+if [ "$answer" = "n" ]; then
   echo ""
   echo "Ok, lets go on!"
 fi
-if [ $answer = y ]; then
+if [ "$answer" = "y" ]; then
   echo ""
   echo "The following packages will be backed up:"
   echo "  /etc/modules-load.d
@@ -32,18 +33,18 @@ if [ $answer = y ]; then
   /etc/motd"
 fi
 echo ""
-echo "Do you want to copy files in Backup folder into the current folder. (y/n):"; read answer
+echo "Do you want to copy files in Backup folder into the current folder. (y/n):"; read -r answer
 
-if [ $answer = n ]; then
+if [ "$answer" = "n" ]; then
   echo ""
 	echo "Thank you. Bye!"
 	exit
 fi
 
-if [ $answer = y ]; then
+if [ "$answer" = "y" ]; then
   echo "Okay lets start!"
   mkdir BackUpConfFiles
-  cd BackUpConfFiles
+  cd BackUpConfFiles || return
   cp -Rv /etc/modules-load.d .
   cp -Rv /etc/modprobe.d .
   mkdir ./cron
