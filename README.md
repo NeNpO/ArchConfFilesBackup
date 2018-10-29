@@ -1,10 +1,10 @@
 # ConfFilesBackup
 
-This script is only for Arch Linux users. Use at one's own risk!
-
 Arch Linux critical conf files Backup and restore as links.
 
 It's something that i'm working on Just for personal porposes.
+
+This script is only for Arch Linux users. Use at one's own risk!
 
 Feel free to use the scripts if you know what are you doing.
 Any suggestions or improvements are welcome!
