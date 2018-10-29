@@ -13,11 +13,11 @@ If you have any questions, ideas, advancements, feedbacks and so on,
 you can contact me at lefterisandrianakis@gmail.com
 
 Don't forget to add the New paths for:
-chromium
-gconf
-mozilla
-PopcornTime
-sublime
-supertuxkart
-thunderbird
-viber
+chromium,
+gconf,
+mozilla,
+PopcornTime,
+sublime,
+supertuxkart,
+thunderbird,
+viber.
