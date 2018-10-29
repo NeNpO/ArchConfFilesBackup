@@ -40,7 +40,11 @@ if [ $answer = n ]; then
 	exit
 fi
 
+<<<<<<< HEAD
 if [ $answer = y ]; then
+=======
+if [ $answer = y ]; then 
+>>>>>>> bc21b7f690eef0246637dcf23ea3e146c8915bb8
   echo ""
   echo "Okay lets start!"
   echo ""
@@ -58,7 +62,11 @@ if [ $answer = y ]; then
   sudo rm /etc/pacman.conf
   sudo rm /etc/bash.bashrc
   sudo rm /home/$USER/.bashrc
+<<<<<<< HEAD
   sudo rm /etc/motd
+=======
+  sudo rm /etc/motd 
+>>>>>>> bc21b7f690eef0246637dcf23ea3e146c8915bb8
   echo ""
   echo "Done! All Files have been removed."
 fi
